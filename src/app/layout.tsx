@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <p>Common Layout!</p>
+        {/* <p>Common Layout!</p> */}
         {children}
       </body>
     </html>

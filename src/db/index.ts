@@ -1,11 +1,11 @@
 import mysql from 'mysql2';
-
+import 'dotenv';
 
 const connectonPool = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: 'toor',
-  database: 'my_first_db',
+  host: process.env['MYSQL_DB_HOST'],
+  user: process.env['MYSQL_DB_USER'],
+  password: process.env['MYSQL_DB_PASSWORD'],
+  database: process.env['MYSQL_DB_DATABASE'],
 });
 
 export const run = async (callback: (conn: mysql.PoolConnection) => Promise<void>) => {
